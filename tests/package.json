@@ -1,0 +1,12 @@
+{
+  "name": "olx-adblocker-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "jsdom-based tests for the OLX Ad Blocker content script",
+  "scripts": {
+    "test": "node run-tests.js"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0"
+  }
+}
