@@ -1,0 +1,12 @@
+/* OLX Ad Blocker — elements flagged by content.js get this class.
+   The class is only added while the corresponding setting is enabled,
+   so toggling a setting off instantly restores everything. */
+.olx-adblock-hidden {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}

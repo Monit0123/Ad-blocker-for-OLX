@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OLX search (mock fixture)</title>
+</head>
+<body>
+  <div id="main_content">
+    <div data-testid="listing-grid" id="grid">
+
+      <!-- organic listing: must stay visible -->
+      <div data-cy="l-card" id="c-organic">
+        <a data-testid="card-title-link" href="/item/cars-c84-used-honda-city-ludhiana-iid-1001" aria-label="Honda City 2019">
+          <img src="https://apollo.olx.in/v1/files/aaa1-IN/image;s=150x0" alt="Honda City 2019">
+          <h2>Honda City 2019</h2>
+        </a>
+        <p data-testid="ad-price">₹ 5,50,000</p>
+        <p data-testid="location-date">Ludhiana, Punjab Today</p>
+      </div>
+
+      <!-- featured via OLX paid-card testid -->
+      <div data-cy="l-card" id="c-featured-testid">
+        <div data-testid="adCard-featured"><span>FEATURED</span></div>
+        <a data-testid="card-title-link" href="/item/cars-c84-swift-vdi-iid-1002"><h2>Swift VDI 2020</h2></a>
+        <p data-testid="ad-price">₹ 4,20,000</p>
+        <p data-testid="location-date">Delhi Today</p>
+      </div>
+
+      <!-- featured badge as direct text of the whole-card anchor -->
+      <div data-cy="l-card" id="c-featured-text">
+        <a href="/item/cars-c84-hyundai-creta-iid-1003">
+          <img src="https://apollo.olx.in/v1/files/bbb1-IN/image;s=150x0" alt="Hyundai Creta">
+          FEATURED
+          <h2>Hyundai Creta 2021</h2>
+        </a>
+        <p data-testid="ad-price">₹ 11,90,000</p>
+      </div>
+
+      <!-- elite seller badge artwork -->
+      <div data-testid="l-card" id="c-elite-img">
+        <a data-testid="card-title-link" href="/item/cars-c84-mercedes-iid-1004">
+          <img alt="ELITE" src="https://apollo.olx.in/v1/files/alias-elite-tag-icon-new/image;original=true">
+          <h2>Mercedes-Benz GLE 2017</h2>
+        </a>
+        <p data-testid="ad-price">₹ 17,99,000</p>
+        <p data-testid="location-date">New Delhi 4 days ago</p>
+      </div>
+
+      <!-- promoted via search_reason in the card URL -->
+      <div data-cy="l-card" id="c-promoted-href">
+        <a href="/item/cars-c84-innova-iid-1005?search_reason=search%7Cpromoted"><h2>Toyota Innova Crysta</h2></a>
+        <p data-testid="ad-price">₹ 14,00,000</p>
+      </div>
+
+      <!-- organic, will be flagged later through the API hook -->
+      <div data-cy="l-card" id="c-api-id">
+        <a href="/item/cars-c84-brezza-iid-1006"><h2>Maruti Brezza 2022</h2></a>
+        <p data-testid="ad-price">₹ 8,50,000</p>
+      </div>
+
+      <!-- second organic control -->
+      <div data-cy="l-card" id="c-organic-2">
+        <a href="/item/cars-c84-wagonr-iid-1007"><h2>WagonR 2021</h2></a>
+        <p data-testid="ad-price">₹ 4,90,000</p>
+      </div>
+
+      <!-- OLX upsell promo tile -->
+      <li id="upsell-tile">
+        <img src="https://apollo.olx.in/v1/files/alias-upsell-listing-desktop/image;original=true" alt="upsell">
+        <p>Buyers are waiting... List your items today at no cost</p>
+      </li>
+
+    </div>
+
+    <!-- third-party DFP ad slot -->
+    <div class="some-wrapper" id="ad-slot-wrapper">
+      <div class="baxter-style-dfp-default-default" id="ad-slot"></div>
+    </div>
+
+    <!-- google ad iframe -->
+    <iframe id="ad-iframe" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-123"></iframe>
+  </div>
+</body>
+</html>

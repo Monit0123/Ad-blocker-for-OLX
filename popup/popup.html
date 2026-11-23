@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OLX Ad Blocker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="head">
+    <img src="../icons/icon48.png" alt="" width="28" height="28">
+    <div>
+      <h1>OLX Ad Blocker</h1>
+      <p class="sub">olx.in &middot; hide paid ads</p>
+    </div>
+  </header>
+
+  <label class="row master">
+    <input type="checkbox" id="enabled">
+    <span class="txt"><b>Block ads on OLX</b><small>master switch</small></span>
+  </label>
+
+  <div class="group" id="group">
+    <label class="row">
+      <input type="checkbox" id="hidePaidListings">
+      <span class="txt"><b>Paid listings</b><small>Elite &middot; Featured &middot; Sponsored &middot; promoted</small></span>
+    </label>
+    <label class="row">
+      <input type="checkbox" id="hideAdSlots">
+      <span class="txt"><b>Banner ad slots</b><small>Google DFP / third-party ad frames</small></span>
+    </label>
+    <label class="row">
+      <input type="checkbox" id="hidePromoTiles">
+      <span class="txt"><b>Promo tiles</b><small>OLX upsell banners inside results</small></span>
+    </label>
+  </div>
+
+  <div class="count" id="countRow">
+    Hidden on this page: <b id="count">&ndash;</b>
+  </div>
+
+  <button id="reload" class="reload" type="button">Reload this tab</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
